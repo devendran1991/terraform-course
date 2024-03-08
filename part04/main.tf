@@ -1,5 +1,5 @@
 provider "aws" {
-    region =  "us-east-1"
+    region =  "us-east-2"
 }
 
 # 1. Creating a VPC
@@ -49,7 +49,7 @@ resource "aws_subnet" "Subnet_Codewithmuh" {
     
     vpc_id = aws_vpc.A.id
     cidr_block = "10.0.0.0/24"
-    availability_zone = "us-east-1a"
+    availability_zone = "us-east-2a"
     depends_on = [aws_internet_gateway.GW_Codewithmuh]
 
     tags = {
